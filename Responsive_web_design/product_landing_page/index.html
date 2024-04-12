@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Python classes for beginners</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+
+      <!-- header section -->
+      <section id="header-section">
+        <header id="header">
+          <img id="header-img" alt="header image" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/121px-Python-logo-notext.svg.png" />
+          <h1 class="title"> Python Tutorial</h1>
+          <nav id="nav-bar">
+            <ul>
+              <li><a id="nav-link" class="nav-link" href="#install-contents">Install</a></li>
+              <li><a id="nav-link" class="nav-link"
+        href="#setup-contents">Setup</a></li>
+              <li><a id="nav-link" class="nav-link" href="#coding-contents">Coding</a></li>
+            </ul>
+          </nav>
+        </header>
+      </section>
+
+      <div class="content">
+        <!-- section for email form -->
+        <section id="form-contents">
+          <form id="form" method="post" action="https://www.freecodecamp.com/email-submit">
+            <h1 class="heading-main">Get started with Python</h1>
+            <p>Cheatsheet for getting started straight in your inbox</p>
+            <input type="email" name="email" id="email" placeholder="   Enter your email here..." />
+            <input id="submit" type="submit" value="Submit"/>
+          </form>
+        </section>
+
+        <!-- installing python section -->
+        <section id="install-contents">
+          <h1 class="heading">Installing python</h1>
+          <p>If you haven't downloaded an installer yet, follow these steps:</p>
+          <ul>
+            <li>Go to the <a href="https://www.python.org/downloads/">downloads</a> page of Python.</li>
+            <li>Select the version you want to use</li>
+            <li>Click on the download link.</li>
+          </ul>
+          <p>Once your download is finished, do the following:</p>
+          <ul>
+            <li>Open your download location.</li>
+            <li>Double click on the installer.</li>
+            <li>Follow the installation steps as prompted.</li>
+          </ul>
+          <p> You should have Python installed on your system now!</p>
+        </section>
+
+        <!-- setup IDE section -->
+        <section id="setup-contents">
+          <h1 class="heading">Set up an IDE for python</h1>
+          <p>You can use any integrated development environment (IDE), which is a software application that helps programmers develop software code efficiently. I prefer using <span class="colorwords"><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></span> (vsCode), but other options like <span class="colorwords"><a target="_blank" href="https://www.jetbrains.com/pycharm/">JetBrains PyCharm</a></span> are also available.</p>
+          <p>
+            You can download the IDE from the respective websites linked above, and set up your environment. For example, for vsCode, you would install extensions for python and jupyter notebook in the extensions tab, allowing you to create, edit and run .py (Python) and .ipynb (Python Notebook) files in the IDE.
+          </p>
+          <p>
+            You can also select an interpreter from your IDE, which allows you to seamlessly switch between different Python versions if you want to. For example, you have code developed in python3.10 that you need to test, but your interpreter is set to python3.12, then you can just switch it in the IDE to allow you to test the older code (assuming that the required packages are installed).
+          </p>
+        </section>
+
+        <!-- Start coding section -->
+        <section id="coding-contents">
+          <h1 class="heading">Let's get you started</h1>
+          <p>
+            This section will be written as if you are using vsCode, you have python3.10 installed, and you have the Python and Jupyter Notebook extensions installed in the IDE. 
+          </p>
+          <p>
+            For basic Python code, you can open your IDE, and create a new file called run.py. You can enter the following code into it:
+          </p>
+          <code>
+               print("Hello World")
+          </code> 
+          <p>
+            You can save the file and run it by either pressing the "play" button, or by executing the following in the IDE native command line interface:
+          </p>
+          <code>
+              python3.10 -m run.py
+          </code> 
+          <p>
+            If you execute the code as is it should print "Hello World" in the command line interface.
+          </p>
+        </section>
+
+        <!-- section for tutorial video -->
+        <section id="tutorial-contents">
+          <h1 class="heading">Tutorial video</h1>
+          <p>This short video shows how to install and set up python</p>
+          <iframe id="video" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
