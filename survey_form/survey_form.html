@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+  <meta charset='utf-8'>
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="survey_form_styles.css">
+</head>
+<body>
+  <h1 id="title">Survey Form</h1>
+  <p id="description">Please complete this dummy survey.</p>
+  <form id="survey-form">
+    <!-- fieldset for name, email and number-->
+    <fieldset>
+      <label for="name" id="name-label">Enter Your Name: 
+        <input id="name" name="name" type="text" required placeholder="name" />
+      </label>
+      <label for="email" id="email-label">Enter Your Email: 
+        <input id="email" name="email" type="email" required placeholder="email" />
+      </label>
+      <label for="number" id="number-label">Enter A Number: 
+        <input id="number" name="number" type="number" placeholder="number" min="5" max="20" />
+      </label>
+    </fieldset>
+    <!-- fieldset for select-->
+    <fieldset>
+      <label for="dropdown">Pick an option
+        <select id="dropdown" name="referrer">
+          <option value="">(select one)</option>
+          <option value="1">Option1</option>
+          <option value="2">Option2</option>
+          <option value="3">Option3</option>
+        </select>
+      </label>
+    </fieldset>
+    <!-- fieldset for radio options-->
+    <fieldset>
+        <legend>Which item?</legend>
+        <label for="item1"><input class="inline" id="item1" type="radio" name="item-type" value="item-1" checked /> Item 1</label>
+        <label for="item2"><input class="inline" id="item2" type="radio" name="item-type" value="item-2" /> Item 2</label>
+      </fieldset>
+      <!-- fieldset for checkbox options-->
+      <fieldset>
+        <legend>Which checkitem?</legend>
+        <label for="checkitem1"><input id="checkitem1" type="checkbox" name="checkitem-type" value="check-item-1" class="inline" /> CheckItem 1</label>
+        <label for="checkitem2"><input id="checkitem2" type="checkbox" name="checkitem-type" value="check-item-2" class="inline"/> CheckItem 2</label>
+      </fieldset>
+      <!-- fieldset for comments-->
+      <fieldset>
+        <label for="comments">Provide a bio:
+          <textarea id="comments" name="comments" rows="3" cols="30" placeholder="I liked such and so..."></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" id="submit" />
+  </form>
+</body>
