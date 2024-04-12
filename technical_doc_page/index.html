@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0" />
+    <title>Importing Python Packages</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    <nav id="navbar">
+      <header id="first-header">
+        <h1 id="title">Python Imports</h1>
+        <p>The how to</p>
+      </header>
+      <ul>
+        <li><a class="nav-link" href="#Python_Imports">Python Imports</a></li>
+        <li><a class="nav-link" href="#Python_Package_Installs">Python Package Installs</a></li>
+        <li><a class="nav-link" href="#The_Import">The Import</a></li>
+        <li><a class="nav-link" href="#From_Import">From Import</a></li>
+        <li><a class="nav-link" href="#Troubleshooting">Troubleshooting</a></li>
+      </ul>
+    </nav>
+    <header class="header-section">
+      <div class="header-contents">
+        <h1 class="actual-header">
+          Importing Python packages
+        </h1>
+        <p class="actual-header-description">
+          What you need to do to get from knowing about a package to importing said package in Python.
+        </p>
+      </div>
+    </header>
+    <main id="main-doc">
+      
+
+      <section class="main-section" id="Python_Imports">
+        <header>Python Imports</header>
+        <div class="section-content">
+          <p>The <span id="freecode">import</span> command is a basic function of the Python language framework that allows you as a user to access Python built-in packages as well as unique packages that are not part of Python, usually installed using <span id="freecode">pip</span>.</p>
+          <p>We will be looking into everything around using <span id="freecode">import</span> for a specific Python package called <span id="freecode">Pandas</span>, which is used for data transformations and manipulations. We'll start with installing the package.</p>
+        </div>
+      </section>
+
+      <section class="main-section" id="Python_Package_Installs">
+        <header>Python Package Installs</header>
+        <div class="section-content">
+          <p>There are a lot of ways to install Python packages. You could use Anaconda, build from wheel, or use the most common method, the <span id="freecode">pip install</span> method. We will be using the last method</p>
+          <p>The most common syntax for using <span id="freecode">pip</span> is as follows</p>
+          <code>pip install pandas</code>
+          <p> What if you want to install a specific version, let's say version 2.2.1? Then you specify it as follows</p>
+          <code>pip install pandas==2.2.1</code>
+          <p> But what if you have python2.7 and 3.10? Then you specify it as follows</p>
+          <code>python3 -m pip install pandas==2.2.1</code>
+        </div>
+      </section>
+
+      <section class="main-section"  id="The_Import">
+        <header>The Import</header>
+        <div class="section-content">
+          <p>We've installed <span id="freecode">Pandas</span> now, so create a .py or .ipynb file in your IDE (like vsCode or PyCharm) and write the following line</p>
+          <code>import pandas</code>
+          <p>You can even use a shorthand to refer to when using it in your code, like so</p>
+          <code>import pandas as pd</code>
+          <p>So you'd use pd instead of pandas, which is useful when you have lots of packages with long names. <span id="freecode">Pandas</span> is a library, which means we can also use a  </p>
+        </div>
+      </section>
+
+      <section class="main-section"  id="From_Import">
+        <header>From Import</header>
+        <div class="section-content">
+          <p>Another way to import packages is to import specific parts of it, using <span id="freecode">from</span>. Lets say you don't need the full <span id="freecode">Pandas</span> package, and only some of the definitions in it, you'd use the <span id="freecode">from ... import ...</span> syntax. Lets say you only need the <span id="freecode">DataFrame</span> class of pandas, your import would look like this</p>
+          <code>from pandas import DataFrame</code>
+          <p id="small">or</p>
+          <code>from pandas import DataFrame as df</code>
+          <p>Now you can install a package and import it or a portion of it!</p>
+        </div>
+      </section>
+      
+      <section class="main-section"  id="Troubleshooting">
+        <header>Troubleshooting</header>
+        <div class="section-content">
+          <p>Let's say you struggle to get a package installed using <span id="freecode">pip</span>, you can check where the error lies. Potential problems can be that
+          <ul>
+            <li> the version you specified is not compatible with the python interpreter version you are using. It can cause dependency issues if you have older packages installed that relied on the older version of pandas. </li>
+            <li> the interpreter's pip path is not picked up </li>
+            </ul>
+            These are two basic things you can check, but there's a plethora of reasons why the install failed. A surefire way to get some answers or help is to copy the error and error code (if present), paste it in Google or your search engine of choice (even chatGPT if you have an account) and seeing what pops up. Stackoverflow links are usually a good place to start</p>
+          <p>For import fails, the same applies as above, and you just have to search for the options to test. You can try the following:
+            <ul>
+              <li> Check if the package installed to the wrong Python version</li>
+              <li> Is the Python version you want to use in your path </li>
+              <li> Is the right Python version selected as interpreter/kernel for your code file.</li>
+              </ul>
+            These are the first three things I'd check.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
