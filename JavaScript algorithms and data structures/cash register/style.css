@@ -47,11 +47,9 @@ body {
 .left-side, .right-side {
     display: flex;
     flex-direction: column;
-}
-
-.screen.right-side {
     justify-content: center;
 }
+
 
 .register-contents, .register-status {
     margin-bottom: 10px;
@@ -193,12 +191,20 @@ body {
     color: white
 }
 
+#reset-btn:hover {
+    background: linear-gradient(to bottom, #d9c540, #b8a841);
+}
+
 .real.button #purchase-btn:hover {
     background: linear-gradient(to bottom, #5cb85c, #618c61);
 }
 
 .real.button #close-btn:hover {
     background: linear-gradient(to bottom, #d9595b, #a85d5e);
+}
+
+#reset-btn:active {
+    background: linear-gradient(to bottom, #fae13d, #b8a841);
 }
 
 .real.button #purchase-btn:active {
@@ -216,4 +222,15 @@ body {
     padding: 20px;
     background-color: #dff0d8;
     color: #3c763d;
+}
+
+.register-contents, .register-status {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: monospace, sans-serif;
+}
+
+.register-contents span, .register-status span {
+    color: #f8f9fa;
 }

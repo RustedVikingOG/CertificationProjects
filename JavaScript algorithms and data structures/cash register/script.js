@@ -24,7 +24,7 @@ let state = {
         ["TWENTY", 60],
         ["ONE HUNDRED", 100]
     ],
-    status: 'OPEN',
+    status: 'CLOSED',
     alert: ''
 };
 
@@ -46,31 +46,49 @@ priceInput.addEventListener('input', event => {
 );
 
 // Display elements from the DOM
-const registerContentsDisplay = document.querySelector('rc-display');
-const registerStatusDisplay = document.querySelector('rs-display');
+const registerContentsDisplay = document.querySelector('.rc-display');
+const registerStatusDisplay = document.querySelector('.rs-display');
 
 
-const updateRegisterContentsDisplay = () => {
+let maxItemLength = 0;
+const updateRegisterDisplay = () => {
     registerContentsDisplay.innerHTML = '';
     state.cid.forEach(item => {
+        const itemLength = item[0].length
+        if (itemLength > maxItemLength) {
+            maxItemLength = itemLength;
+        }
+    });
+    state.cid.forEach(item => {
+        const itemLength = item[0].length
+        const genZerosContent = '0'.repeat(maxItemLength - itemLength);
+        
         const div = document.createElement('div');
-        div.innerHTML = `${item[0]}: $${item[1]}`;
+        div.innerHTML = `<span>${genZerosContent}</span>${item[0]}: $${item[1]}`;
         registerContentsDisplay.appendChild(div);
     });
+
+    const genZerosStatus = '0'.repeat(maxItemLength - 'Status'.length);
+    registerStatusDisplay.innerHTML = `<span>${genZerosStatus}</span>Status: ${state.status}`;
 }
 
-const updateRegisterStatusDisplay = () => {
-    registerStatusDisplay.HTMLcontent = `Status: ${state.status}`;
-}
+window.onload = updateRegisterDisplay();
 
-updateRegisterContentsDisplay();
+// reset = maxItemLength
 
-// const updateUI = () => {
-//     updateRegisterContentsDisplay();
-//     updateRegisterStatusDisplay();
-// }
+resetBtn.addEventListener('click', () => {
+    state.cid = registerContents;
+    state.status = 'CLOSED';
+    state.alert = '';
+    priceInput.value = '1.87';
+    updateRegisterDisplay();
+});
 
-// window.addEventListener('load', updateUI());
+closeDrawerBtn.addEventListener('click', () => {
+    state.status = 'CLOSED';
+    updateRegisterDisplay();
+});
 
-
+// changeDue
+// cashGiven
 
