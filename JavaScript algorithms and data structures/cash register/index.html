@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cash Register</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../cash register/style.css" />
+</head>
+<body>
+    <div class="heading">
+        <div id="title">
+            <h2>Cash Register</h2>
+        </div>
+        <div id="settings">
+            <div>
+                <button id="reset-btn">Reset Register</button>
+            </div>
+            <div>
+                <p>Item Price</p>
+                <input id="default-price" type="number" value="1.87" />
+            </div>
+        </div>
+    </div>
+    <!-- like a computer screen -->
+    <div class="register">
+        <div class="screen left-side">
+            <!-- show what's in the register -->
+            <div class="register-contents">
+                <p class="rc-text">Register contents</p>
+                <div class="rc-display"></div>
+            </div>
+            <!-- is the register open -->
+            <div class="register-status">
+                <p class="rs-text">Register Status</p>
+                <div class="rs-display"></div>
+            </div>
+        </div>
+        <div class="screen right-side">
+
+            <!-- amount of cash given -->
+            <div class="cash input">
+                <input type="number" id="cash" placeholder="Enter cash given">
+            </div>
+            
+            <!-- design -->
+            <div class="fake-buttons">
+                <div class="fb-row1">
+                    <div class="fb-btn small"></div>
+                    <div class="fb-btn small"></div>
+                    <div class="fb-btn small"></div>
+                    <div class="fb-btn medium"></div>
+                </div>
+                <div class="fb-row2">
+                    <div class="fb-btn small"></div>
+                    <div class="fb-btn small"></div>
+                    <div class="fb-btn small"></div>
+                    <div class="fb-btn medium"></div>
+                </div>
+                <div class="fb-row3">
+                    <div class="fb-btn small"></div>
+                    <div class="fb-btn small"></div>
+                    <div class="fb-btn small"></div>
+                    <div class="fb-btn medium"></div>
+                </div>
+                <div class="fb-row4">
+                    <div class="fb-btn large"></div>
+                    <div class="fb-btn medium"></div>
+                </div>
+            </div>
+            
+            <!-- make this stand out from above -->
+            <div class="real button">
+                <button id="purchase-btn">Purchase</button>
+                <button id="close-btn">Close drawer</button>
+            </div>
+        </div>
+        <div class="screen bottom">
+            <div id="change-due"></div>
+        </div>
+    </div>
+
+    <script src="../cash register/script.js"></script>
+</body>
+</html>

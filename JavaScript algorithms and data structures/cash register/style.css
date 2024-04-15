@@ -1,0 +1,219 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.heading h2 {
+    text-align: center;
+    margin: 20px;
+    font-size: 2rem;
+    color: #0a2611;
+}
+
+.register {
+    width: 80%;
+    max-width: 600px;
+    height: 80%;
+    max-height: 900px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.screen {
+    padding: 10px;
+    border-radius: 4px;
+    background: #eceeef;
+}
+
+.left-side, .right-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.screen.right-side {
+    justify-content: center;
+}
+
+.register-contents, .register-status {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.rc-display, .rs-display {
+    font-size: 11px;
+}
+
+.cash input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.fake-buttons {
+    padding: 20px;
+    background: linear-gradient(to right, #d1e6d6, #ccc);
+    margin: 10px 0;
+    border-radius: 4px;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+}
+
+.fb-row1, .fb-row2, .fb-row3, .fb-row4 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fb-btn {
+    display: inline-block;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.fb-btn.small {
+    width: 20%;
+    padding: 10px 0;
+    background: linear-gradient(to bottom, #ddd, #bbb);
+}
+
+.fb-row4 .fb-btn.medium {
+    background: linear-gradient(to bottom, #f5b1a6, #bf5847) !important;
+}
+
+.fb-btn.medium {
+    width: 28%;
+    padding: 12px 0;
+    background: linear-gradient(to bottom, #9da1c9, #5d66c2);
+}
+
+.fb-btn.large {
+    width: 68%;
+    padding: 10px 0;
+    
+}
+
+.real.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+#settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#settings div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#settings div:first-of-type {
+    width: 300px;
+    border-right: 1px solid #3d3a11;
+    padding: 10px 20px 10px 10px;
+    justify-content: end;
+}
+
+#settings div:last-of-type {
+    width: 300px;
+    padding: 10px;
+    border-left: 1px solid #3d3a11;
+}
+
+#settings input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#settings .vertline {
+    border: 1px solid #3d3a11;
+    padding: 8px 0;
+    height: 100%;
+}
+
+#settings p {
+    flex-wrap: nowrap;
+    font-size: 12px;
+}
+
+.real.button button, #settings button {
+    font-size: 12px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+#reset-btn {
+    background-color: #d9c540;
+    color: white
+}
+
+#purchase-btn {
+    background-color: #5cb85c;
+    color: white
+}
+
+#close-btn {
+    background-color: #d9595b;
+    color: white
+}
+
+.real.button #purchase-btn:hover {
+    background: linear-gradient(to bottom, #5cb85c, #618c61);
+}
+
+.real.button #close-btn:hover {
+    background: linear-gradient(to bottom, #d9595b, #a85d5e);
+}
+
+.real.button #purchase-btn:active {
+    background: linear-gradient(to bottom, #97e897, #618c61);
+}
+
+.real.button #close-btn:active {
+    background: linear-gradient(to bottom, #d9595b, #f79798);
+}
+
+.screen.bottom {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 20px;
+    background-color: #dff0d8;
+    color: #3c763d;
+}
