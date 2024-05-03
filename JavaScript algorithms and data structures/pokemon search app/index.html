@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon Search App</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Pokemon Search App</h1>
+    </div>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search Pokemon">
+            <button id="search-button">Search</button>
+        </div>
+        <div class="card-container" id="card-container">
+            <div class="top">
+                <div class="main-details">
+                    <div id="pokemon-name" class="p-name"></div>
+                    <div id="pokemon-id" class="p-id"></div>
+                </div>
+                <div class="sub-details">    
+                    <div id="weight" class="p-details"></div>
+                    <div id="height" class="p-details"></div>
+                </div>
+                <div class="pokemon-image"></div>
+                <div class="extra-details">
+                    <div id="types" class="p-details"></div>
+                </div>
+            </div>
+            <div class="stats-details">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Type</th>
+                            <th>Stats</th>
+                        </tr>
+                        <tr>
+                            <td class="p-stats-name">Health</td>
+                            <td id="hp" class="p-stats"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-stats-name">Attack</td>
+                            <td id="attack" class="p-stats"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-stats-name">Defence</td>
+                            <td id="defence" class="p-stats"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-stats-name">Special Attack</td>
+                            <td id="special-attack" class="p-stats"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-stats-name">Special Defence</td>
+                            <td id="special-defence" class="p-stats"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-stats-name">Speed</td>
+                            <td id="speed" class="p-stats"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
